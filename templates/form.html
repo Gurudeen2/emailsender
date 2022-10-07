@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %} 
+Bulk Email Sender | Design to send bulk messages 
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" action="{% url 'index' %}">
+  {% csrf_token %}
+<!-- SenderEmail Address -->
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Sender Mail</label>
+        <input type="email" name="sender_email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+
+<!-- Sender Email Password -->
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Sender Password</label>
+        <input type="password" name="sender_pass" class="form-control" id="exampleFormControlInput1">
+      </div>
+
+
+      <!-- Receiver Email -->
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Recipient Mail</label>
+        <input type="email" name="receiver_mail" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+
+       <!-- Subject -->
+       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Subject</label>
+        <input type="email" name="receiver_mail" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            
+          </div>
+          <div class="col">
+            
+          </div>
+          <div class="col text-right">
+            <input type="submit" value="Send Mail" class="btn btn-success">
+          </div>
+        </div>
+      </div>
+      
+
+</form>
+
+{% endblock%}
+
+
+<!-- <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        Column
+      </div>
+      <div class="col">
+        Column
+      </div>
+      <div class="col">
+        Column
+      </div>
+    </div>
+  </div> -->
